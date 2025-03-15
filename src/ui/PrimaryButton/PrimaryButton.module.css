@@ -1,0 +1,35 @@
+
+.banner_btn {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #000000 0%, #D52037 100%);
+}
+
+.banner_btn__inner {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    border-radius: 2px;
+    color: var(--dark-color);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.banner_btn__inner:hover {
+    background: transparent;
+    color: var(--light-color);
+}

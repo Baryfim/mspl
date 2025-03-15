@@ -1,0 +1,22 @@
+.sport_inner {
+    padding: 75px 0 90px 0;
+}
+
+.sports_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sports_label {
+    color: #4A1016;
+    text-align: center;
+    font-family: "Descriptor";
+    margin-top: 70px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
