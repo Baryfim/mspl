@@ -1,15 +1,7 @@
-import Header from "@/components/header/header";
-import Banner from "@/components/banner/banner";
-import Sports from "@/components/sports/sports";
-import News from "@/components/news/news";
+import Home from "./(Home)/Home";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Header />
-      <Banner />
-      <Sports />
-      <News />
-    </>
+    <Home />
   );
 }

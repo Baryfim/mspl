@@ -1,0 +1,27 @@
+.base {
+    font-family: "Descriptor";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.size-small {
+    font-size: 32px;
+}
+
+.size-medium {
+    font-size: 48px;
+}
+
+.size-large {
+    font-size: 67px;
+}
+
+.color-light {
+    color: #fff;
+}
+
+.color-dark {
+    color: #4A1016;
+}

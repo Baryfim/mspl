@@ -1,0 +1,29 @@
+.out_project_wrapper {
+    width: 100vw;
+    background-color: var(--dark-color);
+    padding: 70px;
+}
+
+.out_project_grid {
+    padding-top: 70px;
+    width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.small_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.item {
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}

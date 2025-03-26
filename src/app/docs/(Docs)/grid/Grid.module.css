@@ -1,0 +1,20 @@
+.grid { 
+    width: 100%;
+    background: #000;
+    display: grid;
+    /* Задаём три столбца по 300px (можно другую ширину) */
+    grid-template-columns: repeat(3, 350px);
+    /* Расстояние между карточками */
+    gap: 30px;
+    /* Центрируем всю «сетку» внутри родительского контейнера */
+    justify-content: center;
+    /* Чтобы грид сам «встал» по центру страницы, можно добавить */
+    margin: 0 auto;
+}
+
+.block {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+}
+

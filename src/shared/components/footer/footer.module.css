@@ -1,0 +1,5 @@
+.footer_wrapper {
+    width: 100vw;
+    height: 300px;
+    background: linear-gradient(180deg, rgba(213, 32, 55, 0.00) 21.47%, rgba(213, 32, 55, 0.52) 100%), #000;
+}
