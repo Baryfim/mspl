@@ -1,13 +1,14 @@
 import HeadBanner from "@/shared/components/banner/Banner.component"
 import classesBanner from "./Banner.module.css"
+import Typography from "@/ui/Typography/Typography";
 
 
 const AboutBanner = () => {
     return (
         <HeadBanner size="small">
-            <h1 className={classesBanner.about_banner_title}>
+           <Typography size="large" center color="light">
                 О лиге
-            </h1>
+           </Typography>
         </HeadBanner>
     )
 }

@@ -1,85 +1,46 @@
+"use client"
 import classesCollections from "./Collections.module.css"
 import Collection from "../collection/Collection"
-
-
+import { useEffect, useState } from "react"
+import GetDocs, { IDocs } from "@/shared/services/docs.handle"
 
 const Collections = () => {
-    const DATA = [
-        {
-            title: "Учредительные документы",
-            documents: [
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
+    const [docs, setDocs] = useState<IDocs[]>([])
+
+    useEffect(() => {
+        const fetchDocs = async () => {
+            try {
+                const fetchedDocs = await GetDocs()
+                if (fetchedDocs) {
+                    setDocs(fetchedDocs)
                 }
-            ]
-        },
-        {
-            title: "Учредительные документы",
-            documents: [
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Устав МСПЛ",
-                    date: "31.01.2024",
-                },
-                {
-                    title: "Правила",
-                    description: "J4jk iu4u34",
-                    date: "31.01.2024",
-                }
-            ]
+            } catch (error) {
+                console.error(error)
+            }
         }
-    ]
+        fetchDocs()
+    }, [])
+
+    // Group docs by their collection using reduce
+    const collections = docs.reduce<Record<string, IDocs[]>>((acc, doc) => {
+        if (!acc[doc.collection]) {
+            acc[doc.collection] = []
+        }
+        acc[doc.collection].push(doc)
+        return acc
+    }, {})
 
     return (
         <div className={classesCollections.collections}>
-            {
-                 DATA.map((collection) => (
-                    <Collection key={collection.title} {...collection} />
-                ))
-            }
+            {Object.keys(collections).map((collection) => (
+                <Collection
+                    key={collection}
+                    title={collection}
+                    documents={collections[collection]}
+                />
+            ))}
         </div>
     )
 }
 
-export default Collections;
+export default Collections

@@ -1,7 +1,9 @@
 .header_wrapper {
+    position: relative;
     width: 100vw;
     height: 80px;
     background-color: var(--dark-color);
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,4 +42,118 @@
     text-decoration: none;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+.header_burger_menu {
+    display: none;   
+}
+
+@media screen and (max-width: 1024px) {
+    .header__nav {
+        position: absolute;
+        right: -220px;
+        top: 0;
+        height: 100vh;
+        width: 220px;
+        background-color: var(--dark-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .2s ease;
+    }
+
+    .header__nav_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;;
+    }
+
+    .header__nav.header__nav_open {
+        right: 0;
+    }
+
+    .header__nav_inner > li > a {
+        color: var(--light-color);
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 4  00;
+        text-transform: uppercase;
+    }
+
+    .header_burger_menu {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s ease;
+    }
+
+    .header_burger_open {
+        transition: .2s ease;
+    }
+
+    .header_burger_menu > span {
+        width: 45px;
+        height: 3px;
+        background-color: var(--light-color);
+        position: absolute;
+        border-radius: 3px;
+    }
+
+    .header_burger_menu > span::after {
+        content: "";
+        width: 45px;
+        height: 3px;
+        background-color: var(--light-color);
+        position: absolute;
+        border-radius: 3px;
+        top: -10px;
+        transition: .2s ease;
+    }
+
+    .header_burger_menu > span::before {
+        content: "";
+        width: 45px;
+        height: 3px;
+        background-color: var(--light-color);
+        position: absolute;
+        border-radius: 3px;
+        top: 10px;
+        transition: .2s ease;
+    }
+
+    .header_burger_open > span::before {
+        content: "";
+        width: 45px;
+        height: 3px;
+        background-color: var(--light-color);
+        position: absolute;
+        border-radius: 3px;
+        top: 0px;
+        transform: rotate(45deg);
+    }
+
+    .header_burger_open > span::after {
+        content: "";
+        width: 45px;
+        height: 3px;
+        background-color: var(--light-color);
+        position: absolute;
+        border-radius: 3px;
+        top: 0px;
+        transform: rotate(-45deg);
+    }
+
+    .header_burger_open > span {
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }   
 }

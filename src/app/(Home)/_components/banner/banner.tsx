@@ -4,9 +4,14 @@ import classesBanner from "./banner.module.css";
 import Typography from "@/ui/Typography/Typography";
 import { useRouter } from "next/navigation";
 import HeadBanner from "@/shared/components/banner/Banner.component";
+import { useViewportWidth } from "@/shared/hooks/useViewportWidth";
 
 export default function Banner() {
   const router = useRouter();
+  const blockWidth = useViewportWidth({
+    width: [230, 350],
+    points: [425],
+  });
 
   return (
     <HeadBanner size="large">
@@ -25,7 +30,7 @@ export default function Banner() {
           </p>
         </div>
         <PrimaryButton
-          width="350px"
+          width={`${blockWidth}px`}
           height="56px"
           onClick={() => router.push("/about")}
           text="Подробнее О лиге"

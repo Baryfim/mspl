@@ -24,13 +24,21 @@ export default function Sports() {
   }, []);
 
   let itemWidth = 540;
-  if (winWidth <= 1440) {
+  let visibleItems = 2;
+  if (winWidth <= 379) {
+    itemWidth = 300;
+    visibleItems = 1;
+  }
+  else if (winWidth <= 1100) {
+    visibleItems = 1;
+    itemWidth = 360;
+  } else if (winWidth <= 1440) {
     itemWidth = 360;
   }
 
 
   const linkImage =
-    "https://s3-alpha-sig.figma.com/img/4674/0b9a/25f317f192c3993e25c114cebd481a9e?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Fbm8WWaIu1rnlJqK-QUZFnfuxmLkh00qZA-UkoohXmeOvlS~RJOEyPRn4WH6WKcBlRk~xjJtx6n0jAVMWEHDjKEFuEhKLuu4z1KIF~AMzn97fOH9jdOkNpS-BZTk~keOHn0hUUakMZPOLvoruVb0VvIwBNUB6P2fxJEMJ29hc6w3C7CiuKAu-v1Xamnmy1lcjZqsGkDEjbN5rs-6VUBI4GhiSv1H6LJNGefO65bWTcnbyY6Ff5K1bjq7xpSLfCUXFA1ptM4~~ACmSfZNVvMxNjbrTK2EgnHnaJoZp1wFu0B7NeKlgiMWAGLtjoElg8XTyNRmomWU94yaYtf2CFdyKA__";
+    "http://localhost:1337/uploads/2acafc3024de1bd515507eb9cc646b3a_979690a121.png";
   const cards: CardItem[] = [
     {
       img: linkImage,
@@ -91,7 +99,7 @@ export default function Sports() {
       <div className={classesSports.sport_inner}>
         <Carousel
           data={cards}
-          visibleItems={2}
+          visibleItems={visibleItems}
           itemWidth={itemWidth}
           renderItem={(item: CardItem, index: number) => (
             <Card

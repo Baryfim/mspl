@@ -1,15 +1,16 @@
 "use client";
 import Typography from "@/ui/Typography/Typography";
-import ProjectCard, { Project } from "../project_card/ProjectCard";
+import ProjectCard from "../project_card/ProjectCard";
 import classesOurProjects from "./OurProjects.module.css";
 import SmartGrid from "../smart_grid/SmartGrid";
 
 import { useViewportWidth } from "@/shared/hooks/useViewportWidth";
+import { IProject } from "@/shared/services/projects.handle";
 
-const OurProjects = ({ projects }: { projects: Project[] }) => {
+const OurProjects = ({ projects }: { projects: IProject[] }) => {
   const blockWidth = useViewportWidth({
-    width: [850, 1110],
-    points: [1250],
+    width: [600, 850, 1110],
+    points: [950, 1250],
   });
 
   return (
@@ -26,6 +27,8 @@ const OurProjects = ({ projects }: { projects: Project[] }) => {
                 key={project.id}
                 title={project.title}
                 description={project.description}
+                url={project.url}
+                img={project.img}
               />
             ))}
           </SmartGrid>

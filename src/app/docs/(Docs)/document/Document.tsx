@@ -1,19 +1,26 @@
+"use client"
 import DeltaIcon from "@/icons/delta.icon";
 import classesDocument from "./Document.module.css";
+import { useRouter } from "next/navigation";
+
 
 export interface IDocumentsProps {
     title: string,
     description?: string,
-    date: string
+    date: string,
+    url: string
 }
 
 const Document = ({
     title,
     description,
-    date
+    date,
+    url
 }: IDocumentsProps) => {
+    const router = useRouter();
+
     return (
-        <div className={classesDocument.document_card}>
+        <div className={classesDocument.document_card} onClick={() => router.push(url)}>
             <div className={classesDocument.document_card_inner}>
                 <div className={classesDocument.document_card_head}>
                     <h2>{title}</h2>

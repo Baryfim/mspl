@@ -4,26 +4,8 @@
     padding: 70px;
 }
 
-.out_project_grid {
-    padding-top: 70px;
-    width: 1110px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
-.small_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
-}
-
-.item {
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+@media screen and (max-width: 768px) {
+    .out_project_wrapper {
+        padding: 70px 12px;
+    }
 }

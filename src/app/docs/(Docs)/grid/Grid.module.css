@@ -18,3 +18,15 @@
     background-color: #fff;
 }
 
+
+@media screen and (max-width: 1180px) {
+    .grid {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .grid {
+        grid-template-columns: repeat(1, 350px);
+    }
+}

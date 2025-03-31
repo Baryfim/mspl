@@ -1,45 +1,37 @@
+"use client";
 import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
 import classesSportCard from "./SportCard.module.css";
+import { ISports } from "@/shared/services/sports.handle";
+import { useRouter } from "next/navigation";
 
-const SportCard = ({ reflect }: Readonly<{ reflect?: boolean }>) => {
+const SportCard = ({
+  reflect,
+  title,
+  description,
+  url,
+  img,
+}: Readonly<{ reflect?: boolean } & Omit<ISports, "id">>) => {
+  const router = useRouter();
   return (
-    <div className={`${classesSportCard.sport_card_wrapper} ${reflect && classesSportCard.reflect}`}>
+    <div
+      className={`${classesSportCard.sport_card_wrapper} ${
+        reflect && classesSportCard.reflect
+      }`}
+    >
       <img
         className={classesSportCard.sport_card_img}
-        src="https://s3-alpha-sig.figma.com/img/af23/e449/2acafc3024de1bd515507eb9cc646b3a?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=kKgy~hVr2c0MwoVNmSr458o68w96PSAsjA7O~OtJ~Gr5DiHUTVfDGcEEHHJ92A9NwYFsj43-ANYwqdIZuimaKDLD~PzalTjvGvp0Ft7n9ijp~jbCkWjWsE2996O~Fv9slEHtL1rxngBAQ69D~cqNuR~UNzBeEMMqm0ctPTRU4-v3mFONs327Kubkq7MxccfyvCVrk~uWFNVv4Z4x2PrjWh11mQe22P3E6EGQydPS6n5CrYUDYl7Yz-aJ723Er0xeOXIQb30q4NjmFQpnKPxjJapY~b~wxBgkNFvTEFta1FBhGtVEtXGj9bR5Um~FCry83LujZIgoxnpD62w7PooBgw__"
+        src={img}
         alt="бильядр"
       />
       <div className={classesSportCard.inner_card}>
-        <h2>Бильярд “Pull 8”</h2>
-        <p>
-          Американский пул 8 (Eight-ball pool) представляет собой одну из самых
-          популярных и динамичных дисциплин бильярда. Эта игра сочетает в себе
-          простоту правил и глубокую тактическую составляющую, что делает её
-          доступной как для начинающих, так и для профессиональных игроков.
-          История дисциплины начинается в конеце XIX века. Америка, 1878 год.
-          Изобретатель Майкл Фелан предлагает разделить шары на группы – так
-          рождается “Мишен”, позже переименованный в “Пул”. 1920-е годы стали
-          временем становления – появляются первые официальные правила. 1960-е
-          приносят пул в Европу, где он мгновенно находит своих поклонников. В
-          1961 году проводится первый чемпионат мира.  А 1978 год знаменуется
-          созданием WPA – организации, которая дала пулу 8 профессиональный
-          статус. В 1990-х годах происходит институционализация пула 8 как
-          профессионального вида спорта. Ключевые события этого периода:
-          создание профессиональных лиг,начало телевизионных трансляций.  В
-          2010-е годы происходит цифровая трансформация. Внедряются системы
-          видеоповторов, умные столы с датчиками и активно развиваются
-          стриминговые платформы. В настоящее время соревновательная
-          деятельность в "Пул 8" организована в многоуровневую систему,
-          включающую как профессиональные, так и любительские лиги, что
-          обеспечивает возможности для участия игроков различного уровня
-          подготовки. Развитая система судейства, основанная на четких правилах
-          и процедурах, обеспечивает честность и объективность соревнований
-          (согласно официальным правилам Всемирной Ассоциации Бильярда и Снукера
-          – WPBSA). Пул 8 демонстрирует устойчивую тенденцию к развитию и
-          совершенствованию. Современные тенденции указывают на продолжение
-          процесса технологизации и глобализации дисциплины. 
-        </p>
-        <PrimaryButton text="Присоедениться к трансляции" width="315px" height="60px"  />
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <PrimaryButton
+          text="Присоедениться к трансляции"
+          width="315px"
+          height="60px"
+          onClick={() => router.push(url)}
+        />
       </div>
     </div>
   );

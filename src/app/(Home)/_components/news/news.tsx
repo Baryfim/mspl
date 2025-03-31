@@ -1,9 +1,4 @@
-import TgIcon from '@/icons/tg.icon';
 import classesNews from './news.module.css';
-import YoutubeIcon from '@/icons/youtube.icon';
-import VkIcon from '@/icons/vk.icon';
-import FacebookIcon from '@/icons/facebook.icon';
-import InstagramIcon from '@/icons/instagram.icon';
 import TwitchIcon from '@/icons/twitch.icon';
 import Typography from '@/ui/Typography/Typography';
 
@@ -17,22 +12,22 @@ export default function News() {
                 </Typography>
                 <div className={classesNews.news_list}>
                     <a href=''>
-                        <TgIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/tg.svg' alt='Telegram' />
                     </a>
                     <a href=''>
-                        <YoutubeIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/youtube.svg' alt='Youtube' />
                     </a>
                     <a href=''>
-                        <VkIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/vk.svg' alt='Vk' />
                     </a>
                     <a href=''>
-                        <FacebookIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/fb.svg' alt='Facebook' />
                     </a>
                     <a href=''>
-                        <InstagramIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/instagram.svg' alt='Instagram' />
                     </a>
                     <a href=''>
-                        <TwitchIcon color='#fff' colorCircle='#D81E37' />
+                        <img src='./social_media/twitch.svg' alt='Twitch' />
                     </a>
                 </div>
             </div>

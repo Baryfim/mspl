@@ -21,3 +21,10 @@
     line-height: normal;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 700px) {
+    .sport_inner {
+        padding-bottom: 180px;
+    }
+}
+

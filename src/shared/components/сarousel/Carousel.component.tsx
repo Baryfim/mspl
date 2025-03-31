@@ -172,6 +172,25 @@ const Carousel = <T,>({
         .next {
           right: 70px;
         }
+
+        
+        @media screen and (max-width: 700px) {
+            .carousel-button {
+                top: auto;
+                bottom: 64px;
+                transform: translateX(-50%);
+            }
+
+            .carousel-button.prev {
+                left: 40%;
+                width: 67px;
+            }
+
+            .carousel-button.next {
+                left: 60%;
+                width: 67px;
+            }
+        }
       `}</style>
     </div>
   );

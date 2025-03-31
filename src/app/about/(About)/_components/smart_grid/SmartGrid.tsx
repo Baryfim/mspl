@@ -30,7 +30,58 @@ const SmartGrid: React.FC<SmartGridProps> = ({
 
   const count = React.Children.count(children);
 
-  if (winWidth <= 1250) {
+  if (winWidth <= 750) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        width: 'calc(100% - 24px)',
+        padding: '0',
+        gap: `${gap}px`,
+        margin: "70px auto",
+      }}>
+        {children.map((child, index) => (
+          <div
+            key={index}
+            style={{
+              display: "grid",
+              width: "100%",
+              height: "200px",
+            }}
+          >
+            {child}
+          </div>
+        ))}
+      </div>
+    )
+  } else if (winWidth <= 950) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        width,
+        gap: `${gap}px`,
+        margin: "70px auto",
+      }}>
+        {children.map((child, index) => (
+          <div
+            key={index}
+            style={{
+              display: "grid",
+              width: "100%",
+              height: "180px  "
+            }}
+          >
+            {child}
+          </div>
+        ))}
+      </div>
+    )
+  } else if (winWidth <= 1250) {
     const colWidth = `calc((${width}px - ${gap}px) / 2)`;
     return (
       <div

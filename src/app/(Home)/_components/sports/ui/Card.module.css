@@ -46,3 +46,10 @@
         height: 320px;
     }
 }
+
+@media screen and (max-width: 379px) {
+    .card_img > img {
+        width: 300px;
+        height: 280px;
+    }
+}
