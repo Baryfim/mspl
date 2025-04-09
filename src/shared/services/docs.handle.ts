@@ -8,7 +8,7 @@ export interface IDocs {
 }
 
 export default async function GetDocs(): Promise<IDocs[] | undefined> {
-    const API = `http://localhost:1337/api/docs?populate[0]=file&populate[1]=collection`
+    const API = `http://195.24.64.231/api/docs?populate[0]=file&populate[1]=collection`
 
     try {
         const docs_response = await fetch(API).then(res => res.json());
@@ -17,7 +17,7 @@ export default async function GetDocs(): Promise<IDocs[] | undefined> {
             title: doc.name,
             date: doc.date,
             description: doc.description,
-            url: "http://localhost:1337" + doc.file[0].url,
+            url: "http://195.24.64.231/" + doc.file[0].url,
             collection: doc.collection.title
         }));
         

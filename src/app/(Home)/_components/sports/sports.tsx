@@ -3,21 +3,22 @@ import Carousel from "@/shared/components/сarousel/Carousel.component";
 import classesSports from "./sports.module.css";
 import Card from "./ui/Card";
 import { useEffect, useState } from "react";
+import GetSports from "@/shared/services/sports.handle";
 
 interface CardItem {
   title: string;
   img: string;
+  path?: string;
   description: string;
 }
 
 export default function Sports() {
-  const [winWidth, setWinWidth] = useState(window.innerWidth);
-  const [winHeight, setWinHeight] = useState(window.innerHeight);
+  const [winWidth, setWinWidth] = useState(typeof window !== "undefined" ? window?.innerWidth : 1440);
 
   useEffect(() => {
+    setWinWidth(window?.innerWidth)
     const handleResize = () => {
       setWinWidth(window.innerWidth);
-      setWinHeight(window.innerHeight);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -36,62 +37,20 @@ export default function Sports() {
     itemWidth = 360;
   }
 
+  const [cards, setCards] = useState<CardItem[]>([]);
 
-  const linkImage =
-    "http://localhost:1337/uploads/2acafc3024de1bd515507eb9cc646b3a_979690a121.png";
-  const cards: CardItem[] = [
-    {
-      img: linkImage,
-      title: "Card 1",
-      description: "Description 1",
-    },
-    {
-      img: linkImage,
-      title: "Card 2",
-      description: "Description 2",
-    },
-    {
-      img: linkImage,
-      title: "Card 3",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 4",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 5",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 6",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 7",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 8",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 9",
-      description: "Description 3",
-    },
-    {
-      img: linkImage,
-      title: "Card 10",
-      description: "Description 3",
-    },
-  ];
-
+  useEffect(() => {
+    const func = async () => {
+      const response = await GetSports();
+      setCards((response as any).map((card: any) => ({
+        img: card.img,
+        title: card.title,
+        path: '/sports',
+        description: card.description.substring(0, 100) + "...",
+      })));
+    }
+    func();
+  }, [])
 
   return (
     <div className={classesSports.sports_wrapper}>
@@ -107,7 +66,7 @@ export default function Sports() {
               img={item.img}
               title={item.title}
               description={item.description}
-              path={index.toString()}
+              path={item?.path || ''}
             />
           )}
         />

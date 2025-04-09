@@ -16,16 +16,15 @@ const SmartGrid: React.FC<SmartGridProps> = ({
   height = 568,
   gap = 32,
 }) => {
-  const [winWidth, setWinWidth] = useState(window.innerWidth);
-  const [winHeight, setWinHeight] = useState(window.innerHeight);
+  const [winWidth, setWinWidth] = useState(typeof window !== "undefined" ? window?.innerWidth : 1440);
 
   useEffect(() => {
+    setWinWidth(window?.innerWidth)
     const handleResize = () => {
-      setWinWidth(window.innerWidth);
-      setWinHeight(window.innerHeight);
+      setWinWidth(window?.innerWidth);
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window?.addEventListener("resize", handleResize);
+    return () => window?.removeEventListener("resize", handleResize);
   }, []);
 
   const count = React.Children.count(children);

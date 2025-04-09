@@ -1,6 +1,6 @@
 import classesPartners from './partners.module.css'
 
-const Card = ({ id }: { id: number }) => {
+const Card = ({ id }: { id: string }) => {
     return (
         <div className={classesPartners["partner"]} key={id}>
             <div className={classesPartners["partner-inner"]}>

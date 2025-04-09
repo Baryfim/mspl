@@ -1,13 +1,8 @@
 "use client"
 import { usePathname } from "next/navigation";
 import classesFooter from "./footer.module.css"
-import TgIcon from "@/icons/tg.icon";
-import TwitchIcon from "@/icons/twitch.icon";
-import YoutubeIcon from "@/icons/youtube.icon";
-import VkIcon from "@/icons/vk.icon";
-import InstagramIcon from "@/icons/instagram.icon";
-import FacebookIcon from "@/icons/facebook.icon";
-
+import Link from "next/link";
+import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
 
 export default function Footer() {
     const pathname = usePathname();
@@ -17,12 +12,20 @@ export default function Footer() {
     return (
         <footer className={classesFooter.footer_wrapper}>
             <div className={classesFooter.footer_inner}>
-                {/* <TgIcon color="#000" colorCircle="#fff"  />
-                <TwitchIcon color="#000" colorCircle="#fff" />
-                <YoutubeIcon color="#000" colorCircle="#fff" />
-                <VkIcon color="#000" colorCircle="#fff" />
-                <InstagramIcon color="#000" colorCircle="#fff" />
-                <FacebookIcon color="#000" colorCircle="#fff" /> */}
+                <div className={classesFooter.social_media}>
+                    {
+                        ['fb', 'inst', 'vk', 'tg', 'twitch', 'yt'].map(social => (
+                            <img src={`/${social}.png`} key={social} />
+                        ))
+                    }
+                </div>
+                <div className={classesFooter.links}>
+                    <Link href="/about">О нас</Link>
+                    <Link href="/docs">Документация</Link>
+                    <Link href="/sports">Виды спорта</Link>
+                </div>
+                <hr />
+                <p className={classesFooter.year}>© 2025</p>
             </div>
         </footer>
     )

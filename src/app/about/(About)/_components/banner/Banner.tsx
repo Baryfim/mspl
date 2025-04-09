@@ -1,5 +1,4 @@
 import HeadBanner from "@/shared/components/banner/Banner.component"
-import classesBanner from "./Banner.module.css"
 import Typography from "@/ui/Typography/Typography";
 
 

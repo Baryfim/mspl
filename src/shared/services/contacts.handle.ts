@@ -5,7 +5,7 @@ export interface IContact {
 }
 
 export default async function GetContacts(): Promise<IContact[] | undefined> {
-  const API = `http://localhost:1337/api/contacts`;
+  const API = `http://195.24.64.231/api/contacts`;
 
   try {
     const contacts_response = await fetch(API).then((res) => res.json());

@@ -7,7 +7,7 @@ export interface ISports {
 }
 
 export default async function GetSports(): Promise<ISports[] | undefined> {
-  const API = `http://localhost:1337/api/sports?populate=image`
+  const API = `http://195.24.64.231/api/sports?populate=image`
 
   try {
       const sports_response = await fetch(API).then(res => res.json());
@@ -16,7 +16,7 @@ export default async function GetSports(): Promise<ISports[] | undefined> {
           title: sports.title,
           url: sports.url,
           description: sports.description,
-          img: 'http://localhost:1337' + sports.image[0].url
+          img: 'http://195.24.64.231/' + sports.image[0].url
       }));
 
       console.log(sports)
