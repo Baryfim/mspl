@@ -3,6 +3,7 @@ import PrimaryButton from "@/ui/PrimaryButton/PrimaryButton";
 import classesSportCard from "./SportCard.module.css";
 import { ISports } from "@/shared/services/sports.handle";
 import { useRouter } from "next/navigation";
+import { useViewportWidth } from "@/shared/hooks/useViewportWidth";
 
 const SportCard = ({
   reflect,
@@ -12,6 +13,11 @@ const SportCard = ({
   img,
 }: Readonly<{ reflect?: boolean } & Omit<ISports, "id">>) => {
   const router = useRouter();
+  const blockWidth = useViewportWidth({
+    width: [240, 240, 315],
+    points: [595, 320],
+  });
+
   return (
     <div
       className={`${classesSportCard.sport_card_wrapper} ${
@@ -28,7 +34,7 @@ const SportCard = ({
         <p>{description}</p>
         <PrimaryButton
           text="Присоедениться к трансляции"
-          width="315px"
+          width={`${blockWidth}px`}
           height="60px"
           onClick={() => router.push(url)}
         />

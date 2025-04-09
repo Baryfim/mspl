@@ -11,6 +11,8 @@ const ProjectCard = ({ title, description, url, img }: Omit<IProject, "id">) => 
         background: `url(${img})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
+        height: '100%',
+        width: '100%',
       }}
     >
       <div className={classes.project_card_inner}>

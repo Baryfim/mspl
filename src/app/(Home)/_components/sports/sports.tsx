@@ -56,20 +56,28 @@ export default function Sports() {
     <div className={classesSports.sports_wrapper}>
       <h1 className={classesSports.sports_label}>Виды спорта</h1>
       <div className={classesSports.sport_inner}>
-        <Carousel
-          data={cards}
-          visibleItems={visibleItems}
-          itemWidth={itemWidth}
-          renderItem={(item: CardItem, index: number) => (
-            <Card
-              key={index}
-              img={item.img}
-              title={item.title}
-              description={item.description}
-              path={item?.path || ''}
+        {
+          cards.length !== 0 ? (
+            <Carousel
+              data={cards}
+              visibleItems={visibleItems}
+              itemWidth={itemWidth}
+              renderItem={(item: CardItem, index: number) => (
+                <Card
+                  key={index}
+                  img={item.img}
+                  title={item.title}
+                  description={item.description}
+                  path={item?.path || ''}
+                />
+              )}
             />
-          )}
-        />
+          ) : (
+            <h4 className={classesSports.not_found}>
+              Виды спорта не найдены :(
+            </h4>
+          )
+        }
       </div>
     </div>
   );

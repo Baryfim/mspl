@@ -190,8 +190,7 @@ const SmartGrid: React.FC<SmartGridProps> = ({
       <div
         style={{
           width,
-          height,
-          maxHeight: height,
+          height: `calc(${cellHeight}px + ${gap}px + ${cellHeight}px)`,
           display: "grid",
           gridTemplateColumns: `${halfWidth} ${halfWidth}`,
           gap: `${gap}px`,
@@ -201,9 +200,9 @@ const SmartGrid: React.FC<SmartGridProps> = ({
         <div
           style={{
             gridRow: "1 / span 2",
-            maxHeight: `calc(${cellHeight}px + ${gap}px + ${cellHeight}px)`,
-            display: "grid", // Исправлено с 'gird' на 'grid'
-            // gridTemplateColumns: `${cellWidth}`,
+            // maxHeight: `calc(${cellHeight}px + ${gap}px + ${cellHeight}px)`,
+            height: `calc(${cellHeight} + ${gap}px + ${cellHeight})`,
+            display: "grid",
             gridTemplateColumns: `${cellHeight + cellHeight + gap}`,
           }}
         >

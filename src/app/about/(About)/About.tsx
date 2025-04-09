@@ -26,9 +26,7 @@ const About = () => {
     <>
       <AboutBanner />
       <InfoContent />
-      <OurProjects
-        projects={projects}
-      />
+      <OurProjects projects={projects} />
     </>
   );
 };

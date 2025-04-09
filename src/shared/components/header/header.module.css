@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 1024px) {
     .header__nav {
-        position: absolute;
+        position: fixed;
         right: -220px;
         top: 0;
         height: 100vh;
@@ -60,6 +60,7 @@
         justify-content: center;
         align-items: center;
         transition: .2s ease;
+        z-index: 1000;
     }
 
     .header__nav_inner {
@@ -89,6 +90,15 @@
         justify-content: center;
         align-items: center;
         transition: .2s ease;
+    }
+
+    .header_burger_menu {
+        z-index: 10001;
+    }
+
+    .header_burger_open.header_burger_menu {
+        position: fixed;
+        right: 50px;
     }
 
     .header_burger_open {
@@ -156,4 +166,8 @@
     .container {
         padding: 0 12px;
     }   
+    .header_burger_open.header_burger_menu {
+        position: fixed;
+        right: 0px;
+    }
 }

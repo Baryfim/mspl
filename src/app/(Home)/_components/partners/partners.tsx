@@ -6,10 +6,12 @@ import { useEffect, useState } from "react";
 import Typography from "@/ui/Typography/Typography";
 
 export default function Partners() {
-  const [winWidth, setWinWidth] = useState(typeof window !== "undefined" ? window?.innerWidth : 1440);
-  
+  const [winWidth, setWinWidth] = useState(
+    typeof window !== "undefined" ? window?.innerWidth : 1440
+  );
+
   useEffect(() => {
-    setWinWidth(window?.innerWidth)
+    setWinWidth(window?.innerWidth);
     const handleResize = () => {
       setWinWidth(window.innerWidth);
     };
@@ -41,24 +43,32 @@ export default function Partners() {
       const data = await response.json();
       // console.log(data);
       setCards(data.data.map((item: any) => ({ name: item.Name })));
-    }
+    };
     request();
-  }, [])
-  
+  }, []);
+
   return (
     <div className={classesPartners["partners-wrapper"]}>
       <div className={classesPartners["partners-container"]}>
         <div className={classesPartners["partners-inner"]}>
-          <Typography size="medium" color="dark">Наши партнеры</Typography>
+          <Typography size="medium" color="dark" center>
+            Наши партнеры
+          </Typography>
           <div className={classesPartners["partners-slider"]}>
-            <Carousel
-              data={cards}
-              itemWidth={itemWidth}
-              visibleItems={visibleItems}
-              renderItem={(item: CardItem, index: number) => (
-                <Card key={index} id={item.name} />
-              )}
-            />
+            {cards.length !== 0 ? (
+              <Carousel
+                data={cards}
+                itemWidth={itemWidth}
+                visibleItems={visibleItems}
+                renderItem={(item: CardItem, index: number) => (
+                  <Card key={index} id={item.name} />
+                )}
+              />
+            ) : (
+              <h4 className={classesPartners.not_found}>
+                Партнеров пока нету :(
+              </h4>
+            )}
           </div>
         </div>
       </div>
