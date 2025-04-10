@@ -1,69 +1,68 @@
 {
   "pages": {
     "/_not-found/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
       "static/chunks/app/_not-found/page-518abc76c92d5a67.js"
     ],
     "/layout": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
       "static/css/2ecdbe2e456f138e.css",
       "static/chunks/app/layout-51469d7370c027ec.js"
     ],
-    "/about/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+    "/sports/page": [
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/about/page-88a456c0f0ac3ef4.js"
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/sports/page-35fd4c08698cd1ff.js"
     ],
     "/docs/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/docs/page-5341db837c19da7d.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
-      "static/chunks/4bd1b696-e993be22399c1757.js",
-      "static/chunks/684-d478d3c18c009aec.js",
-      "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/c6cf2fefb4b38fa5.css",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/page-57c9c876f8cc0ea7.js"
+      "static/css/fdf8e61b66bd300c.css",
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/docs/page-33622e3b9e815931.js"
     ],
     "/contacts/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/contacts/page-b22509802fe6cb36.js"
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/contacts/page-c24dd8bfaac23907.js"
     ],
     "/results/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/results/page-41c889bfd1eca6e4.js"
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/results/page-4e92ffb7e1c6513f.js"
     ],
-    "/sports/page": [
-      "static/chunks/webpack-97378e43e71ec30b.js",
+    "/about/page": [
+      "static/chunks/webpack-38dd333badfb304a.js",
       "static/chunks/4bd1b696-e993be22399c1757.js",
       "static/chunks/684-d478d3c18c009aec.js",
       "static/chunks/main-app-0adf95a6826f8299.js",
-      "static/css/c6cf2fefb4b38fa5.css",
-      "static/css/f4679f6799993446.css",
-      "static/chunks/app/sports/page-03aaa33de0d5a81b.js"
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/about/page-9417018e40e67be4.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-38dd333badfb304a.js",
+      "static/chunks/4bd1b696-e993be22399c1757.js",
+      "static/chunks/684-d478d3c18c009aec.js",
+      "static/chunks/main-app-0adf95a6826f8299.js",
+      "static/css/6a04f61b0c770580.css",
+      "static/chunks/app/page-ae780daa43b2404d.js"
     ]
   }
 }

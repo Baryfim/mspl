@@ -31,7 +31,8 @@
 .inner_card {
     position: relative;
     width: 1110px;
-    height: 629px;
+    min-height: 629px;
+    height: auto;
     padding: 52px 0;
     padding-left: calc(65px + (442px - (1172px - 1110px)));
     padding-right: 65px;
@@ -90,6 +91,7 @@
 
     .inner_card {
         min-height: 629px;
+        height: auto;
         padding-bottom: 64px;
     }
 
@@ -99,7 +101,12 @@
         padding: 0;
         padding: 0 64px;
         padding-top: 232px;
+        padding-bottom: 50px;
     }
+}
+
+.sport_card_description {
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 595px) {

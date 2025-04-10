@@ -1,7 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/contacts": {
+    "/": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +14,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contacts",
-      "dataRoute": "/contacts.rsc",
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -73,54 +73,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/results": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/results",
-      "dataRoute": "/results.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/sports": {
       "experimentalBypassFor": [
         {
@@ -144,13 +96,61 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/contacts": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/contacts",
+      "dataRoute": "/contacts.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/results": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/results",
+      "dataRoute": "/results.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "4863e0efb7a28c0097ee357fd74445cd",
-    "previewModeSigningKey": "8a32376d7e58071215cec225cf4d77e402494d38d3b7e00bafd4ae430a16aa64",
-    "previewModeEncryptionKey": "db5da5170fc7bb65a5c306e0e3e4b746ff4c74fcb3c1929d115e7330438fac53"
+    "previewModeId": "4792032a2437ed7ae9244f2133a180e5",
+    "previewModeSigningKey": "53ef410e5cb30b0d5142dc86b69bb9dc4da389afbad23898cb9b504b3a73ee61",
+    "previewModeEncryptionKey": "932bc4668db873341309672dfa3fbc595c5a3c57b3a3b154de3d879c0335e225"
   }
 }

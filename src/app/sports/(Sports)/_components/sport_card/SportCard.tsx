@@ -31,7 +31,7 @@ const SportCard = ({
       />
       <div className={classesSportCard.inner_card}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className={classesSportCard.sport_card_description}>{description}</p>
         <PrimaryButton
           text="Присоедениться к трансляции"
           width={`${blockWidth}px`}
