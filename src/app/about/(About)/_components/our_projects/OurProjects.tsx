@@ -21,7 +21,7 @@ const OurProjects = ({ projects }: { projects: IProject[] }) => {
             Наши проекты
           </Typography>
 
-          <SmartGrid width={blockWidth}>
+          <div className={classesOurProjects.grid}>
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -31,7 +31,7 @@ const OurProjects = ({ projects }: { projects: IProject[] }) => {
                 img={project.img}
               />
             ))}
-          </SmartGrid>
+          </div>
         </div>
       </div>
     </div>
