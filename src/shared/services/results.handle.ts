@@ -1,20 +1,23 @@
-import { IDocs } from "./docs.handle";
+export interface IResult {
+    url: string;
+}
 
-export default async function GetResuls(): Promise<IDocs[] | undefined> {
-    const API = `http://195.24.64.231:8888/api/docs?populate[0]=file&populate[1]=collection&filters[collection][title][$eq]=Результаты`
+export default async function GetResults({
+    date,
+    project
+}: {
+    date: string;
+    project: string;
+}): Promise<IResult | undefined> {
+    const API = `http://195.24.64.231:8888/api/docs?populate=project&populate[0]=file&filters[date][$eq]=${date}&filters[project][title][$eq]=${project}`
 
     try {
-        const docs_response = await fetch(API).then(res => res.json());
-        const docs: IDocs[] = docs_response.data.map((doc: any) => ({
-            id: doc.id,
-            title: doc.name,
-            date: doc.date,
-            description: doc.description,
-            url: "http://195.24.64.231:8888" + doc.file[0].url,
-            collection: doc.collection.title
-        }));
+        const doc_response = await fetch(API).then(res => res.json());
+        const doc: IResult = {
+            url: "http://195.24.64.231:8888" + doc_response.data[0].file[0].url,
+        };
         
-        return docs;
+        return doc;
     } catch (error) {
         console.log(error);
     }

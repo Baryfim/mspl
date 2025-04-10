@@ -2,8 +2,8 @@
   "/_not-found/page": "/_not-found",
   "/contacts/page": "/contacts",
   "/docs/page": "/docs",
-  "/sports/page": "/sports",
-  "/page": "/",
+  "/about/page": "/about",
   "/results/page": "/results",
-  "/about/page": "/about"
+  "/sports/page": "/sports",
+  "/page": "/"
 }

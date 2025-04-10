@@ -2,7 +2,7 @@
 
 import HeadBanner from "@/shared/components/banner/Banner.component";
 import Typography from "@/ui/Typography/Typography";
-import Collections from "./_components/Collection/Collection";
+import Form from "./_components/Form/form";
 
 const Results = () => {
     return (
@@ -10,7 +10,7 @@ const Results = () => {
             <HeadBanner size="small">
                 <Typography center size="medium" color="light">Результаты</Typography>
             </HeadBanner>
-            <Collections />
+            <Form />
         </>
     )
 }
