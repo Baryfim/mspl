@@ -17,7 +17,7 @@ export default function News() {
                     <a href='https://www.youtube.com/@msplshow'>
                         <img src='./social_media/youtube.svg' alt='Youtube' />
                     </a>
-                    <a href='https://vk.com/id1034894811'>
+                    <a href='https://vk.com/mspl8'>
                         <img src='./social_media/vk.svg' alt='Vk' />
                     </a>
                     <a href='https://www.facebook.com/share/15MDQHjNud/?mibextid=wwXIfr'>

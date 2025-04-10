@@ -14,7 +14,7 @@ export default function Footer() {
     const socialMediaLinks: {[key: string]: string} = {
         fb: "https://www.facebook.com/share/15MDQHjNud/?mibextid=wwXIfr",
         inst: "https://www.instagram.com/msplofficial/",
-        vk: "https://vk.com/id1034894811",
+        vk: "https://vk.com/mspl8",
         tg: "https://t.me/mspl8",
         twitch: "https://www.twitch.tv/mspllife",
         yt: "https://www.youtube.com/@msplshow"

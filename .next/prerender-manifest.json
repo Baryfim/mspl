@@ -1,7 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/contacts": {
+    "/docs": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +14,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contacts",
-      "dataRoute": "/contacts.rsc",
+      "srcRoute": "/docs",
+      "dataRoute": "/docs.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/about": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/about",
+      "dataRoute": "/about.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -73,7 +97,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/docs": {
+    "/contacts": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -86,32 +110,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/docs",
-      "dataRoute": "/docs.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/about": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/about",
-      "dataRoute": "/about.rsc",
+      "srcRoute": "/contacts",
+      "dataRoute": "/contacts.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -125,8 +125,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "ffb0f32cf1282184139aa4d757868181",
-    "previewModeSigningKey": "0d6e0b1bb1bdc4e57e17e982e1bec260e8a5a81038cecb0f22d8d807b4279830",
-    "previewModeEncryptionKey": "783ef63e4b8ba4b2f0c9ec34bc437b552979252554aaf41c8243d7554a4a2afc"
+    "previewModeId": "ad8c45388da77d3f0287aea6c8c60598",
+    "previewModeSigningKey": "ff1b20e1ae6ff8b34ee039bdd797b1e08d6c75c5487cedc1ade248bf1e21b8eb",
+    "previewModeEncryptionKey": "b0d023fa2bf3cacae292ecfbccdf0e3f65e2d285c596ae799dde8f0b47f7999a"
   }
 }
