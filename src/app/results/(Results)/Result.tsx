@@ -8,7 +8,7 @@ const Results = () => {
     return (
         <>
             <HeadBanner size="small">
-                <Typography size="medium" color="light">Результаты</Typography>
+                <Typography center size="medium" color="light">Результаты</Typography>
             </HeadBanner>
             <Collections />
         </>
