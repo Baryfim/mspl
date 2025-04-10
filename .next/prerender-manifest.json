@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/docs": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/docs",
-      "dataRoute": "/docs.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/about": {
       "experimentalBypassFor": [
         {
@@ -49,7 +25,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/sports": {
+    "/docs": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -62,8 +38,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/sports",
-      "dataRoute": "/sports.rsc",
+      "srcRoute": "/docs",
+      "dataRoute": "/docs.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/contacts": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/contacts",
+      "dataRoute": "/contacts.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -97,7 +97,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/contacts": {
+    "/sports": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -110,8 +110,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contacts",
-      "dataRoute": "/contacts.rsc",
+      "srcRoute": "/sports",
+      "dataRoute": "/sports.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -125,8 +125,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "ad8c45388da77d3f0287aea6c8c60598",
-    "previewModeSigningKey": "ff1b20e1ae6ff8b34ee039bdd797b1e08d6c75c5487cedc1ade248bf1e21b8eb",
-    "previewModeEncryptionKey": "b0d023fa2bf3cacae292ecfbccdf0e3f65e2d285c596ae799dde8f0b47f7999a"
+    "previewModeId": "439ab9649c38f0dd6929d248d174f11a",
+    "previewModeSigningKey": "4d90b8931e8e4a65e6ffca1864300bf761cf4f531f20fa5ab60188cebbc9f4ad",
+    "previewModeEncryptionKey": "f36b3a850eecba14a632a12de3c6a36c9f317b14635fbd7c5db8e2f3045d8474"
   }
 }

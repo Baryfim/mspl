@@ -23,7 +23,9 @@ const Document = ({
         <div className={classesDocument.document_card} onClick={() => router.push(url)}>
             <div className={classesDocument.document_card_inner}>
                 <div className={classesDocument.document_card_head}>
-                    <h2>{title}</h2>
+                    <h2 style={{
+                        fontSize: title.length > 99 ? "14px" : "16px"
+                    }}>{title}</h2>
                     <p>{description}</p>
                 </div>
                 <DeltaIcon className={classesDocument.document_card_delta} />
