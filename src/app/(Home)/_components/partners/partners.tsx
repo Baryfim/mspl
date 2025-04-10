@@ -39,7 +39,7 @@ export default function Partners() {
 
   useEffect(() => {
     const request = async () => {
-      const response = await fetch("http://195.24.64.231/api/partners");
+      const response = await fetch("http://195.24.64.231:8888/api/partners");
       const data = await response.json();
       // console.log(data);
       setCards(data.data.map((item: any) => ({ name: item.Name })));
