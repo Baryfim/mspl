@@ -26,7 +26,7 @@ export default function News() {
                     <a href='https://www.instagram.com/msplofficial/'>
                         <img src='./social_media/instagram.svg' alt='Instagram' />
                     </a>
-                    <a href='https://www.twitch.tv/mspllife'>
+                    <a href='https://www.twitch.tv/mspllive'>
                         <img src='./social_media/twitch.svg' alt='Twitch' />
                     </a>
                 </div>

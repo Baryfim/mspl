@@ -16,7 +16,7 @@ export default function Footer() {
         inst: "https://www.instagram.com/msplofficial/",
         vk: "https://vk.com/mspl8",
         tg: "https://t.me/mspl8",
-        twitch: "https://www.twitch.tv/mspllife",
+        twitch: "https://www.twitch.tv/mspllive",
         yt: "https://www.youtube.com/@msplshow"
     }
 
