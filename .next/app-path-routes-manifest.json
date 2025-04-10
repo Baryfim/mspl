@@ -1,8 +1,9 @@
 {
   "/_not-found/page": "/_not-found",
-  "/about/page": "/about",
-  "/contacts/page": "/contacts",
-  "/docs/page": "/docs",
   "/page": "/",
+  "/contacts/page": "/contacts",
+  "/about/page": "/about",
+  "/results/page": "/results",
+  "/docs/page": "/docs",
   "/sports/page": "/sports"
 }

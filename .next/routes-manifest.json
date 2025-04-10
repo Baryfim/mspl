@@ -46,6 +46,12 @@
       "namedRegex": "^/docs(?:/)?$"
     },
     {
+      "page": "/results",
+      "regex": "^/results(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/results(?:/)?$"
+    },
+    {
       "page": "/sports",
       "regex": "^/sports(?:/)?$",
       "routeKeys": {},

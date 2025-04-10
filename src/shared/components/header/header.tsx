@@ -32,6 +32,9 @@ export default function Header() {
                                 <Link href="/docs">Документы</Link>
                             </li>
                             <li>
+                                <Link href="/results">Результаты</Link>
+                            </li>
+                            <li>
                                 <Link href="/contacts">Контакты</Link>
                             </li>
                         </ul>

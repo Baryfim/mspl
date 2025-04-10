@@ -8,7 +8,7 @@ export interface IDocs {
 }
 
 export default async function GetDocs(): Promise<IDocs[] | undefined> {
-    const API = `http://195.24.64.231:8888/api/docs?populate[0]=file&populate[1]=collection`
+    const API = `http://195.24.64.231:8888/api/docs?populate[0]=file&populate[1]=collection&filters[collection][title][$ne]=Результаты`
 
     try {
         const docs_response = await fetch(API).then(res => res.json());
