@@ -8,28 +8,7 @@ import { useEffect, useState } from "react";
 import GetContacts, { IContact } from "@/shared/services/contacts.handle";
 
 const Contacts = () => {
-  const [contacts, setContacts] = useState<IContact[]>([
-    {
-      id: 1,
-      label: "Email",
-      data: "info@mspl.kz",
-    },
-    {
-      id: 2,
-      label: "Email",
-      data: "info@mspl.kz",
-    },
-    {
-      id: 3,
-      label: "Email",
-      data: "info@mspl.kz",
-    },
-    {
-      id: 4,
-      label: "Email",
-      data: "info@mspl.kz",
-    }
-  ]);
+  const [contacts, setContacts] = useState<IContact[]>([]);
 
   useEffect(() => {
     const fetchDocs = async () => {
@@ -42,7 +21,7 @@ const Contacts = () => {
         console.error(error);
       }
     };
-    // fetchDocs();
+    fetchDocs();
   }, []);
 
   return (
