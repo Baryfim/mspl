@@ -16,7 +16,7 @@ export default async function GetProjects(): Promise<IProject[] | undefined> {
             title: project.title,
             url: project.url,
             description: project.Description,
-            img: 'http://195.24.64.231:8888/' + project.image[0].url
+            img: 'http://195.24.64.231:8888' + project.image[0].url
         }));
 
         console.log(projects)

@@ -16,7 +16,7 @@ export default async function GetSports(): Promise<ISports[] | undefined> {
           title: sports.title,
           url: sports.url,
           description: sports.description,
-          img: 'http://195.24.64.231:8888/' + sports.image[0].url
+          img: 'http://195.24.64.231:8888' + sports.image[0].url
       }));
 
       console.log(sports)

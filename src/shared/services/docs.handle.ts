@@ -17,7 +17,7 @@ export default async function GetDocs(): Promise<IDocs[] | undefined> {
             title: doc.name,
             date: doc.date,
             description: doc.description,
-            url: "http://195.24.64.231:8888/" + doc.file[0].url,
+            url: "http://195.24.64.231:8888" + doc.file[0].url,
             collection: doc.collection.title
         }));
         
