@@ -4,6 +4,7 @@ import classesForm from "./form.module.css";
 import GetProjects, { IProject } from "@/shared/services/projects.handle";
 import GetResults, { IResult } from "@/shared/services/results.handle";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Form = () => {
   // Устанавливаем сегодняшнюю дату в формате YYYY-MM-DD
@@ -90,7 +91,7 @@ const Form = () => {
           </div>
           <button className={classesForm.button_search} onClick={handleSearch}>
             {isFound ? (
-              <img src="./SEARCH.svg" alt="Search" />
+              <Image src="/SEARCH.svg" alt="Search" />
             ) : (
               <div className={classesForm.not_found}>
                 <h1>!</h1>

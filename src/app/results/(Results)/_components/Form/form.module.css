@@ -30,6 +30,9 @@
     position: relative;
     cursor: pointer;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 460px;
     border: none;
     background: linear-gradient(90deg, rgba(213, 32, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
@@ -140,17 +143,20 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    height: auto;
 }
 
 .not_found>h1 {
     font-size: 96px;
     color: #fff;
+    font-family: "Roboto";
 }
 
 .not_found>h3 {
     font-size: 28px;
     color: #fff;
     text-align: left;
+    font-family: "Roboto";
 }
 
 @media screen and (max-width: 1193px) {
