@@ -89,6 +89,7 @@
 .date>.input_wrapper>input[type="date"] {
     width: 133px;
     height: 28px;
+    background: #fff;
     border-radius: 1px;
     font-size: 15px;
     border: none;
@@ -109,8 +110,7 @@
     width: 249px;
     height: 28px;
     padding: 0 5px;
-
-
+    background: #fff;
     margin: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -180,7 +180,7 @@
         width: 130px;
     }
 
-    .button_search > img {
+    .button_search>img {
         width: 40px;
     }
 
@@ -208,7 +208,7 @@
         align-items: center;
         background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(213, 32, 55, 1) 100%);
     }
-    
+
     .date>.input_wrapper>input[type="date"] {
         width: 113px;
         height: 28px;

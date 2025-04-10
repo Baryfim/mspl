@@ -90,7 +90,7 @@ const Form = () => {
           </div>
           <button className={classesForm.button_search} onClick={handleSearch}>
             {isFound ? (
-              <img src="/SEARCH.svg" alt="Search" />
+              <img src="./SEARCH.svg" alt="Search" />
             ) : (
               <div className={classesForm.not_found}>
                 <h1>!</h1>
