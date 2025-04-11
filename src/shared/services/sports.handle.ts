@@ -7,7 +7,7 @@ export interface ISports {
 }
 
 export default async function GetSports(): Promise<ISports[] | undefined> {
-  const API = `http://195.24.64.231:8888/api/sports?populate=image`
+  const API = `http://195.24.64.231:8888/api/sports?populate=image&sort[0]=updatedAt:desc`
 
   try {
       const sports_response = await fetch(API).then(res => res.json());

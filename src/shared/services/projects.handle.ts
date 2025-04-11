@@ -7,7 +7,7 @@ export interface IProject {
 }
 
 export default async function GetProjects(): Promise<IProject[] | undefined> {
-    const API = `http://195.24.64.231:8888/api/projects?populate=image`
+    const API = `http://195.24.64.231:8888/api/projects?populate=image&sort[0]=updatedAt:desc`
 
     try {
         const projects_response = await fetch(API).then(res => res.json());
